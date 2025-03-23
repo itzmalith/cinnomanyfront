@@ -1,66 +1,66 @@
-/* dashboard.component.css */
 
-/* Container for the entire dashboard */
 .dashboard-container {
-    max-width: 900px;  /* Reduced from 1200px for a more compact layout */
-    max-height: 1200px;
-    margin: 40px auto;
-    padding: 30px;
-    background: linear-gradient(135deg, #FDEBD0, #F5CBA7); /* warm cinnamon gradient */
+    max-width: 900px;  
+    margin: 20px auto;  
+    padding: 20px; 
+    background: 
+    linear-gradient(135deg, rgba(253, 235, 208, 0.9), rgba(245, 203, 167, 0.917)),
+        url('../../../assets/images/cinnoman.jpg') no-repeat center center;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  /* Welcome header */
+
   .dashboard-container h2 {
-    font-size: 32px;
-    color: #7B3F00; /* deep cinnamon hue */
-    margin-bottom: 20px;
+    font-size: 28px;  
+    color: #7B3F00;  
+    margin-bottom: 15px;  
     text-align: center;
   }
   
-  /* Layout for main content: prediction form & history */
+
   .dashboard-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 15px;  
   }
   
-  /* Prediction form container */
+
   .prediction-form-container {
     flex: 1 1 300px;
-    background: #FFF8F0;
-    padding: 20px;
+    padding: 15px; 
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    margin: 0 auto; /* Centers the form container horizontally */
+
+    margin: 0 auto; 
   }
   
-  /* Prediction form styling */
+
   .prediction-form-container form {
     display: flex;
     flex-direction: column;
+    margin: 0 auto; 
+
   }
   
   .prediction-form-container form h2 {
-    font-size: 26px;
+    font-size: 22px; 
     color: #7B3F00;
     text-align: center;
-    margin-bottom: 15px;
+    margin: 0 auto;   
   }
   
   /* Form group for inputs and selects */
   .prediction-form-container .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;  
   }
   
   .prediction-form-container input,
   .prediction-form-container select {
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
+    padding: 10px;  /* Reduced padding */
+    font-size: 14px;  /* Reduced font size */
     border: 1px solid #E0A96D;
     border-radius: 8px;
     background-color: #FFF;
@@ -77,12 +77,12 @@
   
   /* Submit button styling */
   .prediction-form-container button.submit-btn {
-    background-color: #D2691E; /* cinnamon shade */
+    background-color: #D2691E;  /* Cinnamon shade */
     color: #FFF;
     border: none;
-    padding: 14px;
+    padding: 10px;  /* Reduced padding */
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;  /* Reduced font size */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 10px;
@@ -96,14 +96,14 @@
   /* Error and result messages */
   .error-message {
     color: #E74C3C;
-    font-size: 16px;
+    font-size: 14px;  /* Reduced font size */
     text-align: center;
     margin-top: 10px;
   }
   
   .result-message {
     color: #27AE60;
-    font-size: 18px;
+    font-size: 16px;  /* Reduced font size */
     text-align: center;
     margin-top: 10px;
   }
@@ -112,16 +112,16 @@
   .prediction-history {
     flex: 1 1 300px;
     background: #FFF8F0;
-    padding: 20px;
+    padding: 15px;  /* Reduced padding */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    max-height: 400px;
+    max-height: 250px;  /* Reduced from 400px */
     overflow-y: auto;
   }
   
   .prediction-history h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 22px;  /* Reduced font size */
+    margin-bottom: 10px;  /* Reduced margin */
     color: #7B3F00;
     display: flex;
     align-items: center;
@@ -129,7 +129,7 @@
   }
   
   .prediction-history h3::before {
-    content: "📜 "; /* emoji for history */
+    content: "📜 ";  /* Emoji for history */
     margin-right: 8px;
   }
   
@@ -139,9 +139,9 @@
   }
   
   .prediction-history li {
-    padding: 10px;
+    padding: 8px;  /* Reduced padding */
     border-bottom: 1px solid #E0A96D;
-    font-size: 16px;
+    font-size: 14px;  /* Reduced font size */
     color: #7B3F00;
     display: flex;
     justify-content: space-between;
@@ -156,11 +156,11 @@
     background-color: #E74C3C;
     color: #FFF;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;  /* Reduced padding */
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;  /* Reduced font size */
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 20px;  /* Reduced margin */
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
@@ -175,7 +175,6 @@
       flex-direction: column;
       align-items: center;
     }
-  
     .prediction-form-container,
     .prediction-history {
       width: 100%;
@@ -184,24 +183,21 @@
   
   @media (max-width: 480px) {
     .dashboard-container {
-      padding: 20px;
+      padding: 15px;
     }
-    
     .dashboard-container h2 {
-      font-size: 28px;
+      font-size: 24px;
     }
-    
     .prediction-form-container form h2,
     .prediction-history h3 {
-      font-size: 22px;
+      font-size: 20px;
     }
-    
     .prediction-form-container input,
     .prediction-form-container select,
     .prediction-form-container button.submit-btn,
     .logout-btn {
-      font-size: 16px;
-      padding: 10px;
+      font-size: 14px;
+      padding: 8px;
     }
   }
   
