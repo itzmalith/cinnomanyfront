@@ -1,0 +1,207 @@
+/* dashboard.component.css */
+
+/* Container for the entire dashboard */
+.dashboard-container {
+    max-width: 900px;  /* Reduced from 1200px for a more compact layout */
+    max-height: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #FDEBD0, #F5CBA7); /* warm cinnamon gradient */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Welcome header */
+  .dashboard-container h2 {
+    font-size: 32px;
+    color: #7B3F00; /* deep cinnamon hue */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Layout for main content: prediction form & history */
+  .dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Prediction form container */
+  .prediction-form-container {
+    flex: 1 1 300px;
+    background: #FFF8F0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 0 auto; /* Centers the form container horizontally */
+  }
+  
+  /* Prediction form styling */
+  .prediction-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .prediction-form-container form h2 {
+    font-size: 26px;
+    color: #7B3F00;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Form group for inputs and selects */
+  .prediction-form-container .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .prediction-form-container input,
+  .prediction-form-container select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #E0A96D;
+    border-radius: 8px;
+    background-color: #FFF;
+    color: #7B3F00;
+    box-sizing: border-box;
+  }
+  
+  .prediction-form-container input:focus,
+  .prediction-form-container select:focus {
+    outline: none;
+    border-color: #A97142;
+    box-shadow: 0 0 8px rgba(169, 113, 66, 0.3);
+  }
+  
+  /* Submit button styling */
+  .prediction-form-container button.submit-btn {
+    background-color: #D2691E; /* cinnamon shade */
+    color: #FFF;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  .prediction-form-container button.submit-btn:hover {
+    background-color: #B35916;
+    transform: translateY(-2px);
+  }
+  
+  /* Error and result messages */
+  .error-message {
+    color: #E74C3C;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .result-message {
+    color: #27AE60;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Prediction history container */
+  .prediction-history {
+    flex: 1 1 300px;
+    background: #FFF8F0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .prediction-history h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #7B3F00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .prediction-history h3::before {
+    content: "📜 "; /* emoji for history */
+    margin-right: 8px;
+  }
+  
+  .prediction-history ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .prediction-history li {
+    padding: 10px;
+    border-bottom: 1px solid #E0A96D;
+    font-size: 16px;
+    color: #7B3F00;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .prediction-history li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Logout button styling */
+  .logout-btn {
+    background-color: #E74C3C;
+    color: #FFF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #C0392B;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dashboard-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .prediction-form-container,
+    .prediction-history {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-container {
+      padding: 20px;
+    }
+    
+    .dashboard-container h2 {
+      font-size: 28px;
+    }
+    
+    .prediction-form-container form h2,
+    .prediction-history h3 {
+      font-size: 22px;
+    }
+    
+    .prediction-form-container input,
+    .prediction-form-container select,
+    .prediction-form-container button.submit-btn,
+    .logout-btn {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  

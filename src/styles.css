@@ -1,0 +1,106 @@
+/* src/styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FDEBD0, #F5CBA7); /* warm cinnamon gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  /* Form Styles */
+  form {
+    background: #FFF8F0; /* light warm background */
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Headings */
+  h2 {
+    font-size: 24px;
+    color: #7B3F00; /* deep cinnamon hue */
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  /* Input Fields */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* space between inputs */
+    border: 1px solid #E0A96D;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #A97142;
+    outline: none;
+  }
+  
+  /* Submit Button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #D2691E; /* cinnamon shade */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #B35916;
+  }
+  
+  /* Error Message */
+  p.error-message {
+    color: #E74C3C;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Signup/Login Link */
+  a {
+    display: block;
+    margin-top: 15px;
+    color: #7B3F00;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 480px) {
+    form {
+      width: 90%;
+      padding: 20px;
+    }
+    
+    h2 {
+      font-size: 20px;
+    }
+    
+    input,
+    button,
+    a {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

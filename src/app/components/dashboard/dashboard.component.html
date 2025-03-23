@@ -1,0 +1,75 @@
+<div class="dashboard-container">
+    <h2>Welcome, {{ user.email }} 🍂</h2>
+  
+    <div class="dashboard-content">
+      <!-- Prediction Form -->
+      <div class="prediction-form-container">
+        <form (ngSubmit)="predict()" class="prediction-form">
+          <h2>Make a Prediction</h2>
+          <div class="form-group">
+            <input type="text" name="Humidity" placeholder="Humidity (e.g., 80%)" [(ngModel)]="prediction.Humidity" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Temperature" placeholder="Temperature (e.g., 28°C)" [(ngModel)]="prediction.Temperature" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="pH" placeholder="pH (e.g., 6.8)" [(ngModel)]="prediction.pH" required>
+          </div>
+          <div class="form-group">
+            <select name="Rainfall" [(ngModel)]="prediction.Rainfall" required>
+              <option value="" disabled selected>Select Rainfall</option>
+              <option value="Low">Low</option>
+              <option value="Moderate">Moderate</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" name="Leaf Damage (%)" placeholder="Leaf Damage (%) (e.g., 15%)" [(ngModel)]="prediction['Leaf Damage (%)']" required>
+          </div>
+          <div class="form-group">
+            <select name="Larvae Presence" [(ngModel)]="prediction['Larvae Presence']" required>
+              <option value="" disabled selected>Select Larvae Presence</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="Soil Type" [(ngModel)]="prediction['Soil Type']" required>
+              <option value="" disabled selected>Select Soil Type</option>
+              <option value="Loamy">Loamy</option>
+              <option value="Sandy">Sandy</option>
+              <option value="Clayey">Clayey</option>
+              <option value="Clay">Clay</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="Season" [(ngModel)]="prediction.Season" required>
+              <option value="" disabled selected>Select Season</option>
+              <option value="Monsoon">Monsoon</option>
+              <option value="Wet">Wet</option>
+              <option value="Dry">Dry</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Predict</button>
+          <p *ngIf="predictionError" class="error-message">{{ predictionError }}</p>
+          <p *ngIf="predictionResult" class="result-message">Prediction: {{ predictionResult }}</p>
+        </form>
+      </div>
+  
+      <!-- Prediction History -->
+      <div class="prediction-history">
+        <h3>Prediction History</h3>
+        <div *ngIf="!historyRecords.length">
+          <p>No history records for this user.</p>
+        </div>
+        <ul *ngIf="historyRecords.length">
+          <li *ngFor="let record of historyRecords">
+            <span>{{ record.date }}:</span> <span>{{ record.status }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <button (click)="logout()" class="logout-btn">Logout 🚪</button>
+  </div>
+  

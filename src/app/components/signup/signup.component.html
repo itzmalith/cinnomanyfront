@@ -1,0 +1,8 @@
+<form (ngSubmit)="signup()">
+    <input type="text" placeholder="Username" name="username" [(ngModel)]="username" required>
+    <input type="email" placeholder="Email" name="email" [(ngModel)]="email" required>
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="password" required>
+    <button type="submit">Signup</button>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+    <a routerLink="/">Already have an account? Login</a>
+</form>
